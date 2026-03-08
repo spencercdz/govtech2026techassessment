@@ -28,3 +28,5 @@ Deliver all required assessment artifacts in a coherent, reviewable repository f
   - Mitigation: evidence-first workflow and optional/required escalation markers.
 - Risk: Prototype not publicly deployed in this environment.
   - Mitigation: documented platform choice and deployment pathway.
+
+- 21:05-21:10: Updated Task 5 prototype platform from Flowise to Poe and added live link.

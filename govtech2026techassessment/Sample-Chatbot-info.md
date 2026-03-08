@@ -1,34 +1,33 @@
 # Sample Chatbot Prototype Info
 
 ## Platform Selected
-**Flowise (open-source)**
+**Poe**
 
 ## Why This Platform
-- Fast visual orchestration for prompt + policy layers.
-- Easy integration of guardrail nodes and webhook-based escalation.
-- Suitable for quick prototype delivery within the assessment timeline.
-- Can be self-hosted or deployed on free-tier infrastructure.
+- Fastest path to deploy and share a working chatbot via public URL.
+- Low setup overhead for prompt iteration during take-home timelines.
+- Good fit for demonstrating prompt behavior, safety guardrails, and support workflows.
+- Easy evaluator access without requiring local setup.
 
 ## Access URL
-- Prototype URL: `Not published from this offline environment`
-- Suggested deployment target: Render/Railway with Flowise cloud URL after publish.
+- Prototype URL: [CampusMarket on Poe](https://poe.com/CampusMarket)
 
 ## Prototype Design
-- Core behavior implemented using `prompt.md` as system prompt.
-- Inputs: user message + lightweight context tags (role hint, account state).
-- Output: structured JSON-style response for easier testing.
-- Safety branch routes high-risk intents to moderation escalation template.
+- Core behavior implemented using `prompt.md` as the system instruction baseline.
+- Inputs: user message + lightweight context assumptions (buyer/seller/new user/safety intent).
+- Output style: structured, action-oriented responses aligned to the testing rubric.
+- Safety handling: high-risk intents route to clear escalation guidance (moderator/campus safety).
 
 ## Testing Performed
-- Golden test simulation against `test-cases.json`.
-- Output scoring approach documented in `testing-framework.md`.
+- Golden test simulation designed against `test-cases.json`.
+- Evaluation rubric and pass gates documented in `testing-framework.md`.
 - Sample run artifact recorded in `testing-result.md`.
 
 ## Assumptions
-- Real policy API and moderation queue were not available; mocked as logical pathways.
-- Authentication and profile data are represented as context variables only.
+- Poe-hosted prototype demonstrates conversational behavior but does not directly integrate with internal university moderation APIs.
+- Account verification, payments, and case management remain conceptual or manual in this prototype stage.
 
 ## Limitations
-- No live backend integrations (payments, user database, moderation case system).
-- No production telemetry from real user traffic.
-- URL publication not completed in this execution environment.
+- No direct backend integration with production marketplace databases.
+- No live moderation workflow ingestion or case-status sync.
+- Prototype behavior may vary with platform-level model updates over time.
